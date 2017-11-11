@@ -1,0 +1,75 @@
+body{
+  background-color: #FFFFCC;
+  margin-top: 0;
+  margin-left: 0;
+  background-image:url(https://i.pinimg.com/originals/1b/0d/53/1b0d53932f6ee65c879bffffe9fea9ba.jpg);
+}
+
+#navBar{
+  width: 70%;
+  height: 10vh;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: "Arial";
+  float: left;
+  margin-left: 15%;
+  margin-top: 2vh;
+}
+
+#orderButton{
+  width: 30%;
+  height: 5vh;
+  font-size: 1.5em;
+  color: #000;
+  background-color: #ffd700;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Arial";
+  margin-left: 35%;
+  margin-top: 5vh;
+}
+ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 20%;
+}
+
+li{
+  width: 15%;
+  float: left;
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+li:hover{
+  background-color: #ffd700;
+  color: #000;
+}
+
+#head{
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  float: left;
+}
+#headTitle{
+  font-size: 3.5em;
+  color: #ffd700;
+  font-family: "Lobster Two";
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 0vh;
+}
+
+#main{
+  width: 90%;
+  height: 4000px;
+  background-color: #77dd77;
+  margin-left: 5%;
+  float: left;
+  margin-top: 28vh;
+}
