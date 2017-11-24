@@ -23,6 +23,8 @@ public class Controllers {
 	{
 		String a = "Hello World";
 		model.addAttribute("hello", a);
+		List<Flower> f = flowerRepo.findAll();
+		model.addAttribute("flowers", f);
 		return "index";
 	}
 

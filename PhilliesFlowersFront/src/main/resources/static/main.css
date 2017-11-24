@@ -15,7 +15,14 @@ body{
   margin-left: 15%;
   margin-top: 2vh;
 }
-
+#form{
+  width: 50%;
+  margin-left: 25%;
+}
+label{
+  font-size: 1.2em;
+  font-family: "Arial";
+}
 #orderButton{
   width: 30%;
   height: 5vh;
