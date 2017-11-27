@@ -3,29 +3,30 @@
 <head>
 <title>Phillies Flowers | Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" media="all" href="../static/main.css" th:href="@{/main.css}" />
-<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/main.css" th:href="@{/main.css}" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two'
+	rel='stylesheet' type='text/css' />
 </head>
 <body>
 	<div id="head">
 		<p id="headTitle">Phillies Flowers</p>
 		<div id="navBar">
 			<ul>
-  			<li>Home</li>
-  			<li>Make Order</li>
-  			<li>Packages</li>
-  			<li>Login</li>
+				<li>Home</li>
+				<li>Make Order</li>
+				<li>Packages</li>
+				<li>Login</li>
 			</ul>
 		</div>
 	</div>
 	<div id="main">
-		<p>Hello Again Again</p>
-		<div id="form">
-			<!-- <form action="#" th:action="@{orderProcessing}" th:object="${order}" method="POST">
-				<label>First Name:<input type="text" th:field="*{id}"/></label>
-				<label>Last Name:<input type="text" th:field="*{id}"/></label>
-			</form> -->
-		</div>
+		<p>Create your order for that someone special</p>
+		<form action="#" th:action="@{/getOrder}" th:object="${orderForm}" method="get">
+			<p>First Name: <input type="text" th:field="*{firstName}" /></p>
+			<p>Last Name: <input type="text" th:field="*{lastName}" /></p>
+			<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+		</form>
 	</div>
 </body>
 </html>
