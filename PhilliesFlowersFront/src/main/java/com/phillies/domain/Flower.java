@@ -12,6 +12,10 @@ public class Flower {
 	int stock;
 	float price;
 
+	public Flower() {
+		super();
+	}
+
 	public Flower(int id, String name, int stock, float price) {
 		super();
 		this.id = id;

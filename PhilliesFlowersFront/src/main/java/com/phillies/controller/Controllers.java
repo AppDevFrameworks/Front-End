@@ -1,11 +1,15 @@
 package com.phillies.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.phillies.domain.Flower;
 import com.phillies.domain.Order;
 import com.phillies.repository.FlowerRepo;
 
@@ -16,11 +20,14 @@ public class Controllers {
 	FlowerRepo flowerRepo;
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String index(Order order) {
+	public String index(Model model, Order order) {
+		model.addAttribute("order", order);
+		List<Flower> flowers =  flowerRepo.findAll();
+		model.addAttribute("flowers", flowers);
 		return "index";
 	}
 	
-	@RequestMapping(value="/", method=RequestMethod.POST)
+	@RequestMapping(value="/order", method=RequestMethod.POST)
 	public String orderSubmit(Order order, BindingResult bindingResult, Model model) {
 		if (bindingResult.hasErrors()) {
 			return "index";

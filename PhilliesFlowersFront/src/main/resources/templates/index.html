@@ -21,14 +21,20 @@
 		</div>
 	</div>
 	<div id="main">
-		<p>Create your order for that someone special</p>
-		<form action="#" th:action="@{/}" th:object="${order}" method="post">
-			<label>First Name:</label><input type="text" th:field="*{firstName}" />
-			<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First Name error message</p>
-			<label>Last Name:</label><input type="text" th:field="*{lastName}" />
-			<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last Name error message</p>
-			<button type="submit">Submit post</button>
-		</form>
+		<p id="headline">Create your order for that someone special</p>
+		<div id="form">
+			<form action="#" th:action="@{/order}" th:object="${order}" method="post">
+				<label>First Name:</label><input type="text" th:field="*{firstName}" /><br/>
+				<label>Last Name:</label><input type="text" th:field="*{lastName}" /><br/>
+				<label>Mobile Number:</label><input type="text" th:field="*{lastName}" /><br/>
+				<label>Select Package:</label>
+				<select class="form-control" id="flower" name="flower">
+					<option> --- Select One --- </option>
+        			<option th:each="flower : ${flowers}" th:value="${flower.name}" th:text="${flower.name}" ></option>
+    			</select>
+			<br/><button id="orderButton" type="submit">Submit Order</button>
+				</form>
+		</div>
 	</div>
 </body>
 </html>
