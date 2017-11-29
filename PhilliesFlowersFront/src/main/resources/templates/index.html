@@ -22,10 +22,12 @@
 	</div>
 	<div id="main">
 		<p>Create your order for that someone special</p>
-		<form action="#" th:action="@{/getOrder}" th:object="${orderForm}" method="get">
-			<p>First Name: <input type="text" th:field="*{firstName}" /></p>
-			<p>Last Name: <input type="text" th:field="*{lastName}" /></p>
-			<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+		<form action="#" th:action="@{/}" th:object="${order}" method="post">
+			<label>First Name:</label><input type="text" th:field="*{firstName}" />
+			<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First Name error message</p>
+			<label>Last Name:</label><input type="text" th:field="*{lastName}" />
+			<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last Name error message</p>
+			<button type="submit">Submit post</button>
 		</form>
 	</div>
 </body>

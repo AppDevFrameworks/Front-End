@@ -6,13 +6,12 @@ body{
 }
 
 #navBar{
-  width: 70%;
+  width: 80%;
   height: 10vh;
   color: #fff;
   font-size: 1.5em;
   font-family: "Arial";
   float: left;
-  margin-left: 15%;
   margin-top: 2vh;
 }
 #form{
@@ -36,24 +35,24 @@ label{
   margin-top: 5vh;
 }
 ul {
-    width: 100%;
+    width: 80%;
+    display: inline-block;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    margin-left: 20%;
+    text-align: center;
+    margin-left: 30%;
 }
 
 li{
-  width: 15%;
+  width: 20%;
   float: left;
   text-align: center;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
 }
 li:hover{
-  background-color: #ffd700;
-  color: #000;
+  font-weight: bold;
+  color: #fff;
 }
 
 #head{
