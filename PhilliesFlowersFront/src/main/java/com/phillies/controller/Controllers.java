@@ -13,6 +13,7 @@ import com.phillies.domain.Account;
 import com.phillies.domain.Flower;
 import com.phillies.domain.FlowerPackage;
 import com.phillies.domain.Order;
+import com.phillies.domain.Account;
 import com.phillies.repository.FlowerRepo;
 import com.phillies.repository.PackageRepo;
 
@@ -30,12 +31,12 @@ public class Controllers {
 		model.addAttribute("order", order);
 		List<FlowerPackage> packages =  packageRepo.findAll();
 		model.addAttribute("packages", packages);
-		System.out.println(packages.get(0).getName());
 		return "index";
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public String login(Model model) {
+	public String login(Model model, Account account) {
+		model.addAttribute("account", account);
 		return "login";
 
 	}
@@ -55,8 +56,8 @@ public class Controllers {
 		if (bindingResult.hasErrors()) {
 			return "login";
 		}
-		model.addAttribute("firstName", account.getFirstname());
-		model.addAttribute("lastName", account.getLastname());
+//		model.addAttribute("firstName", account.getFirstname());
+//		model.addAttribute("lastName", account.getLastname());
 		return "loginDashboard";
 	}
 
