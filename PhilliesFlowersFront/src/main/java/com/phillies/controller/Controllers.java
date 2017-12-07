@@ -9,22 +9,35 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.phillies.domain.Account;
 import com.phillies.domain.Flower;
+import com.phillies.domain.FlowerPackage;
 import com.phillies.domain.Order;
 import com.phillies.repository.FlowerRepo;
+import com.phillies.repository.PackageRepo;
 
 @Controller
 public class Controllers {
 
 	@Autowired
 	FlowerRepo flowerRepo;
+	
+	@Autowired
+	PackageRepo packageRepo;
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String index(Model model, Order order) {
 		model.addAttribute("order", order);
-		List<Flower> flowers =  flowerRepo.findAll();
-		model.addAttribute("flowers", flowers);
+		List<FlowerPackage> packages =  packageRepo.findAll();
+		model.addAttribute("packages", packages);
+		System.out.println(packages.get(0).getName());
 		return "index";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String login(Model model) {
+		return "login";
+
 	}
 	
 	@RequestMapping(value="/order", method=RequestMethod.POST)
@@ -37,22 +50,14 @@ public class Controllers {
 		return "orderReturn";
 	}
 	
-//	@GetMapping("/displayOne/{id}")
-//	public String showMyDetails(@PathVariable int id, Model model)
-//	{
-//		Flower f = (Flower) flowerRepo.findOne((int) id);
-//		model.addAttribute("flower", f);
-//		return "displayOne";
-//	}
-//	
-//
-//	@GetMapping("/displayall")
-//	public String displayAll(Model model)
-//	{
-//		List<Flower> f = flowerRepo.findAll();
-//		model.addAttribute("flowers", f);
-//		return "displayAll";
-//	}
-	
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String loginUser(Account account, BindingResult bindingResult, Model model) {
+		if (bindingResult.hasErrors()) {
+			return "login";
+		}
+		model.addAttribute("firstName", account.getFirstname());
+		model.addAttribute("lastName", account.getLastname());
+		return "loginDashboard";
+	}
 
 }

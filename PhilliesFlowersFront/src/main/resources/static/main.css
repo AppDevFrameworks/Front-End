@@ -5,6 +5,11 @@ body{
   background-image:url(https://i.pinimg.com/originals/1b/0d/53/1b0d53932f6ee65c879bffffe9fea9ba.jpg);
 }
 
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
 #navBar{
   width: 80%;
   height: 10vh;
@@ -40,6 +45,11 @@ input{
   width: 30%;
   font-size: 1.2em;
   margin-top: 0.5%;
+}
+.input{
+    width: 30%;
+    font-size: 1.2em;
+    margin-top: 0.5%;
 }
 #orderButton{
   width: 30%;

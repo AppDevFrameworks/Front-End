@@ -13,10 +13,10 @@
 		<p id="headTitle">Phillies Flowers</p>
 		<div id="navBar">
 			<ul>
-				<li>Home</li>
+				<li><a href="index">Home</a></li>
 				<li>Make Order</li>
 				<li>Packages</li>
-				<li>Login</li>
+				<li><a href="login">Login</a></li>
 			</ul>
 		</div>
 	</div>
@@ -27,10 +27,9 @@
 				<label>First Name:</label><input type="text" th:field="*{firstName}" /><br/>
 				<label>Last Name:</label><input type="text" th:field="*{lastName}" /><br/>
 				<label>Mobile Number:</label><input type="text" th:field="*{lastName}" /><br/>
-				<label>Select Package:</label>
-				<select class="form-control" id="flower" name="flower">
+				<label>Select Package:</label><select class="input" id="package" name="package">
 					<option> --- Select One --- </option>
-        			<option th:each="flower : ${flowers}" th:value="${flower.name}" th:text="${flower.name}" ></option>
+        			<option th:each="package : ${packages}" th:value="${package.name}" th:text="${package.name}" ></option>
     			</select>
 			<br/><button id="orderButton" type="submit">Submit Order</button>
 				</form>
