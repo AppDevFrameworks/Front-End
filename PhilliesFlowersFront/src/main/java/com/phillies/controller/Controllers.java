@@ -1,5 +1,14 @@
 package com.phillies.controller;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,12 +50,13 @@ public class Controllers {
 	}
 	
 	@RequestMapping(value="/order", method=RequestMethod.POST)
-	public String orderSubmit(Order order, BindingResult bindingResult, Model model) {
+	public String orderSubmit(Order order, BindingResult bindingResult, Model model) throws MalformedURLException, IOException {
 		if (bindingResult.hasErrors()) {
 			return "index";
 		}
 		model.addAttribute("firstName", order.getFirstName());
 		model.addAttribute("lastName", order.getLastName());
+		model.addAttribute("status", orderMore("Red Flowers", 1000));
 		return "orderReturn";
 	}
 	
@@ -59,5 +69,30 @@ public class Controllers {
 		model.addAttribute("lastName", account.getLastname());
 		return "loginDashboard";
 	}
+	
+	public String orderMore(String item, int amount) throws MalformedURLException, IOException {
+		String url = "http://localhost:8090/getOrder";
+		String charset = "UTF-8";
+		String query = String.format("item=%s&amount=%s", 
+			     URLEncoder.encode(item, charset), 
+			     URLEncoder.encode(amount+"", charset));
+		URLConnection connection = new URL(url).openConnection();
+		connection.setDoOutput(true); // Triggers POST.
+		connection.setRequestProperty("Accept-Charset", charset);
+		connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
 
+		try (OutputStream output = connection.getOutputStream()) {
+		    output.write(query.getBytes(charset));
+		}
+
+		InputStream response = connection.getInputStream();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(response));
+		StringBuilder result = new StringBuilder();
+		String line;
+		while((line = reader.readLine()) != null) {
+		    result.append(line);
+		}
+		System.out.println(result.toString());
+		return result.toString();
+	}
 }
