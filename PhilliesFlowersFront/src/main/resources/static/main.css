@@ -10,6 +10,29 @@ a{
   color: #fff;
 }
 
+#orderPane{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 40%;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100px;
+}
+
+#subline{
+  font-family: "Arial";
+  font-size: 1.3em;
+  margin-left: 2%;
+}
+
+#paneTitle{
+	font-size: 1.4em;
+	color: #fff;
+	text-align: center;
+	font-family: "Arial";
+	padding-top: 2vh;
+  font-weight: bolder;
+}
 #navBar{
   width: 80%;
   height: 10vh;

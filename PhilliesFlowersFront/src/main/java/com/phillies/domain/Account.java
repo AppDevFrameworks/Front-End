@@ -1,5 +1,8 @@
 package com.phillies.domain;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "account")
 public class Account {
 	String username, password, firstname, lastname;
 	
@@ -14,7 +17,7 @@ public class Account {
 		this.firstname = firstname;
 		this.lastname = lastname;
 	}
-
+	
 	public String getUsername() {
 		return username;
 	}

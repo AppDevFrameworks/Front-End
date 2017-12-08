@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Phillies Flowers | Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/main.css" th:href="@{/main.css}" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two'
+	rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div id="head">
+		<p id="headTitle">Phillies Flowers</p>
+		<div id="navBar">
+			<ul>
+				<li><a href="index">Home</a></li>
+				<li>Make Order</li>
+				<li>Packages</li>
+				<li><a href="login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<p id="headline">Create your order for that someone special</p>
+		<div id="form">
+			<form action="#" th:action="@{/order}" th:object="${order}" method="post">
+				<label>First Name:</label><input type="text" th:field="*{firstName}" /><br/>
+				<label>Last Name:</label><input type="text" th:field="*{lastName}" /><br/>
+				<label>Mobile Number:</label><input type="text" th:field="*{lastName}" /><br/>
+				<label>Select Package:</label><select class="input" id="package" name="package">
+					<option> --- Select One --- </option>
+        			<option th:each="package : ${packages}" th:value="${package.name}" th:text="${package.name}" ></option>
+    			</select>
+			<br/><button id="orderButton" type="submit">Submit Order</button>
+				</form>
+		</div>
+	</div>
+</body>
+</html>

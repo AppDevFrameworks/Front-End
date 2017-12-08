@@ -21,11 +21,12 @@
 		</div>
 	</div>
 	<div id="main">
-    <h3>Administrator Dashboard</h3>
-		<h4>First Name:</h4>
-		<p th:text="${firstName}" />
-		<h4>Last Name:</h4>
-		<p th:text="${lastName}" />
+	    <p id="headline">Administrator Dashboard</p>
+	    <p id="subline" th:text="${currentlyLogged}"/>
+
+			<div id="orderPane">
+					<p id="paneTitle">Most Recent Order</p>
+			</div>
 	</div>
 </body>
 </html>
