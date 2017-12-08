@@ -12,11 +12,13 @@ import java.net.URLEncoder;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.jms.activemq.ActiveMQProperties.Packages;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.phillies.domain.Account;
 import com.phillies.domain.Flower;
@@ -24,6 +26,7 @@ import com.phillies.domain.FlowerPackage;
 import com.phillies.domain.Order;
 import com.phillies.domain.Account;
 import com.phillies.repository.FlowerRepo;
+import com.phillies.repository.OrderRepo;
 import com.phillies.repository.PackageRepo;
 
 @Controller
@@ -34,6 +37,9 @@ public class MainController {
 	
 	@Autowired
 	PackageRepo packageRepo;
+	
+	@Autowired
+	OrderRepo orderRepo;
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String index(Model model, Order order) {
@@ -44,13 +50,14 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/order", method=RequestMethod.POST)
-	public String orderSubmit(Order order, BindingResult bindingResult, Model model) throws MalformedURLException, IOException {
+	public String orderSubmit(Order order, @RequestParam String packages , BindingResult bindingResult, Model model) throws MalformedURLException, IOException {
 		if (bindingResult.hasErrors()) {
 			return "index";
 		}
-		model.addAttribute("firstName", order.getFirstName());
-		model.addAttribute("lastName", order.getLastName());
-		model.addAttribute("status", orderMore("Red Flowers", 1000));
+		model.addAttribute("customer", "Customer Name: " + order.getFirstName() + " " + order.getLastName());
+		model.addAttribute("email", "Customer E-Mail Address: " + order.getEmailAddress());
+		model.addAttribute("mobile", "Customer Phone Number: " + order.getMobileNo());
+		//model.addAttribute("status", orderMore("Red Flowers", 1000));
 		return "orderReturn";
 	}
 	

@@ -10,13 +10,22 @@ a{
   color: #fff;
 }
 
+#orderSummary{
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  background-color: rgba(255,250,250,0.8);
+  float: left;
+}
+
 #orderPane{
+	float: left;
 	margin-left: 5%;
 	margin-right: 5%;
 	width: 40%;
 	height: auto;
 	background-color: rgba(0, 0, 0, 0.5);
-	height: 100px;
+	height: 50vh;
 }
 
 #subline{
@@ -31,7 +40,23 @@ a{
 	text-align: center;
 	font-family: "Arial";
 	padding-top: 2vh;
-  font-weight: bolder;
+  	font-weight: bolder;
+}
+
+#adminButton{
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Arial";
+  font-weight: bold;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+	width: 40%;
+	margin-left: 5%;
+	margin-right: 5%;
+	float: left;
+  margin-bottom: 2vh;
+	background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
 }
 #navBar{
   width: 80%;
