@@ -2243,3 +2243,253 @@
 2017-12-08 18:07:48,781 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
 2017-12-08 18:07:48,784 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-12-08 18:07:48,784 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:18:26,130 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:18:26,166 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:18:26,166 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:18:26,209 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:18:26,259 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:19:49,774 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:19:49,774 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:19:49,953 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:19:49,959 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:19:49,959 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:20:29,421 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:20:29,469 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:20:29,526 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:20:29,532 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:20:29,537 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:21:40,813 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:21:40,815 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:21:40,871 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:21:40,877 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:21:40,877 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:21:45,098 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:21:45,099 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:21:45,102 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:21:45,105 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:21:45,105 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:24:59,216 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:24:59,217 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:24:59,220 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:24:59,312 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:24:59,312 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:25:30,271 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:25:30,272 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:25:30,282 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:25:30,290 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:25:30,295 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:25:41,367 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:25:41,368 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:25:41,377 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:25:41,387 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:25:41,387 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:26:14,083 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:26:14,084 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:26:14,087 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:26:14,090 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:26:14,095 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:27:16,915 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:27:16,916 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:27:16,928 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:27:16,936 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:27:16,936 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:27:27,805 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:27:27,805 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:27:27,814 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:27:27,822 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:27:27,827 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:28:17,368 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:28:17,369 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:28:17,431 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:28:17,440 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:28:17,440 [Worker-253] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:28:21,321 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:28:21,322 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:28:21,324 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:28:21,326 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:28:21,326 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:28:44,868 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:28:44,869 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:28:44,873 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:28:44,962 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:28:44,962 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:29:05,866 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:29:05,866 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:29:05,912 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:29:05,927 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:29:05,932 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:29:18,550 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:29:18,550 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:29:18,609 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:29:18,618 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:29:18,618 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:32:20,589 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:32:20,590 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:32:20,595 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:32:20,596 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:32:20,665 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:32:41,870 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:32:41,871 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:32:41,881 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:32:41,888 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:32:41,888 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:32:51,707 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:32:51,708 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:32:51,718 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:32:51,724 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:32:51,729 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:33:18,644 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:33:18,646 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:33:18,708 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:33:18,716 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:33:18,716 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:36:45,902 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:36:45,902 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:36:45,903 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:36:45,909 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:36:45,909 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:39:20,022 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:39:20,022 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:39:20,023 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:39:20,088 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:39:20,088 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:39:21,161 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:39:21,161 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:39:21,167 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:39:21,177 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:39:21,182 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:39:59,082 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:39:59,083 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:39:59,148 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:39:59,156 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:39:59,156 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:40:27,667 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:40:27,667 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:40:27,667 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:40:27,671 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:40:27,751 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:40:32,672 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:40:32,673 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:40:32,678 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:40:32,686 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:40:32,686 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:40:34,649 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:40:34,649 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:40:34,655 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:40:34,663 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:40:34,739 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:41:44,588 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:41:44,589 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:41:44,802 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:41:44,824 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:41:44,824 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:45:09,065 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:45:09,065 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:45:09,065 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:45:09,070 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:45:09,149 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:45:10,220 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:45:10,224 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:45:10,229 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:45:10,237 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:45:10,237 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:45:16,453 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:45:16,453 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:45:16,458 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:45:16,470 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:45:16,476 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:46:11,145 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:46:11,146 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:46:11,196 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:46:11,206 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:46:11,206 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:48:15,288 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:48:15,288 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:48:15,289 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:48:15,294 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:48:15,368 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:50:10,870 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:50:10,871 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:50:11,103 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-12-08 18:50:11,115 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:50:11,115 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:51:52,853 [Worker-260] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:51:52,854 [Worker-260] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:51:52,903 [Worker-260] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:51:52,914 [Worker-260] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:51:52,924 [Worker-260] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:54:27,126 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:54:27,127 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:54:27,176 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:54:27,182 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:54:27,183 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:54:46,838 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:54:46,839 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:54:46,842 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:54:46,844 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:54:46,844 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:55:27,985 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:55:27,985 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:55:27,988 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:55:28,049 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:55:28,049 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:56:28,815 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:56:28,815 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:56:29,009 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:56:29,021 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:56:29,027 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:57:14,196 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:57:14,196 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 18:57:14,341 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:57:14,351 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:57:14,351 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:57:48,062 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:57:48,063 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:57:48,066 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:57:48,068 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:57:48,127 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:58:11,231 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:58:11,232 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:58:11,287 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:58:11,292 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:58:11,293 [Worker-256] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:58:59,500 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:58:59,501 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:58:59,653 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:58:59,681 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:58:59,686 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:59:21,807 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:59:21,808 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:59:21,816 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:59:21,822 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:59:21,822 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:59:29,835 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:59:29,836 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:59:29,839 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:59:29,841 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:59:29,841 [Worker-255] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 18:59:34,135 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:59:34,136 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 18:59:34,140 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2017-12-08 18:59:34,149 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 18:59:34,149 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 19:00:22,218 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:22,218 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 19:00:22,342 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 19:00:22,429 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:22,435 [Worker-261] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 19:00:38,476 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:38,476 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 19:00:38,481 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 19:00:38,490 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:38,490 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 19:00:47,391 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:47,391 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 19:00:47,391 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 19:00:47,396 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:47,403 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
+2017-12-08 19:00:53,112 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:53,113 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-12-08 19:00:53,118 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-12-08 19:00:53,129 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-12-08 19:00:53,129 [Worker-252] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rober\Documents\GitHub\Phillies-Flowers\Front-End\PhilliesFlowersFront\src\test\resources
