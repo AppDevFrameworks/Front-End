@@ -1,8 +1,12 @@
 package com.phillies.entities;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.phillies.domain.Account;
@@ -32,6 +36,7 @@ public class DataLoader implements ApplicationRunner {
 	String[] username = {"phillieH","JasmineR","SimonC","RobC","JerC"};
 	String[] password = {"Password","Password","Password","Password","Password"};
 	
+	ArrayList<FlowerPackage> fp = new ArrayList<>();
 	
 	@Autowired
 	FlowerRepo flowerRepo;
@@ -51,8 +56,6 @@ public class DataLoader implements ApplicationRunner {
 			flowerRepo.save(new Flower(1+i,flowerName[i], flowerStock[i], flowerPrice[i]));
 		}
 		
-		System.out.println("COUNT:" + flowerRepo.count());
-		
 		for(int i = 0; i < packageName.length; i++) {
 			packageRepo.save(new FlowerPackage(1+i, packageName[i], packageFlowers[i], packageItems[i],packageStock[i],packagePrice[i]));
 		}
@@ -60,12 +63,27 @@ public class DataLoader implements ApplicationRunner {
 		for(int i = 0; i < username.length; i++) {
 			accountRepo.save(new Account(username[i],password[i],firstname[i],lastname[i]));
 		}
+		
+		for (FlowerPackage p: packageRepo.findAll()) {
+			fp.add(p);
+		}
 	}
 	
 	public void placeOrder() throws Exception {
-		//int id = order.getOrderId();
-//		orderRepo.save(new Order(id, order.getFirstName(), 
-//				order.getLastName(), order.getEmailAddress(), order.getMobileNo(),
-//				order.getOrder()));
+		
+	}
+	
+	public FlowerPackage getPackageInfo(String name) throws Exception{
+		FlowerPackage selected;
+		
+		for (FlowerPackage p : fp) {
+			if(p.getName().equals(name)) {
+				selected = p;
+				break;
+			}
+		}
+		
+		System.out.println(selected.getPrice());
+		return selected;
 	}
 }

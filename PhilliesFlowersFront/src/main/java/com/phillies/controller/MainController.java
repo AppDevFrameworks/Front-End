@@ -24,6 +24,7 @@ import com.phillies.domain.Account;
 import com.phillies.domain.Flower;
 import com.phillies.domain.FlowerPackage;
 import com.phillies.domain.Order;
+import com.phillies.entities.DataLoader;
 import com.phillies.domain.Account;
 import com.phillies.repository.FlowerRepo;
 import com.phillies.repository.OrderRepo;
@@ -40,7 +41,8 @@ public class MainController {
 	
 	@Autowired
 	OrderRepo orderRepo;
-
+	
+	DataLoader dl = new DataLoader();
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String index(Model model, Order order) {
 		model.addAttribute("order", order);
@@ -50,13 +52,27 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/order", method=RequestMethod.POST)
-	public String orderSubmit(Order order, @RequestParam String packages , BindingResult bindingResult, Model model) throws MalformedURLException, IOException {
+	public String orderSubmit(Order order, @RequestParam String packages , BindingResult bindingResult, Model model) throws Exception {
 		if (bindingResult.hasErrors()) {
 			return "index";
 		}
 		model.addAttribute("customer", "Customer Name: " + order.getFirstName() + " " + order.getLastName());
-		model.addAttribute("email", "Customer E-Mail Address: " + order.getEmailAddress());
+		model.addAttribute("email", "Customer E-mail Address: " + order.getEmailAddress());
 		model.addAttribute("mobile", "Customer Phone Number: " + order.getMobileNo());
+		model.addAttribute("package", "Package Chosen: " + packages);
+		
+		FlowerPackage pack = dl.getPackageInfo(packages);
+		
+		String flowers = "";
+		System.out.println(pack.getName());
+		for(String f: pack.getFlowers()) {
+			System.out.println(f);
+			flowers += f + " ";
+		}
+		
+		model.addAttribute("flowers", flowers);
+		model.addAttribute("price", pack.getPrice());
+		
 		//model.addAttribute("status", orderMore("Red Flowers", 1000));
 		return "orderReturn";
 	}
