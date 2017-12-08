@@ -21,13 +21,13 @@ import com.phillies.repository.PackageRepo;
 @Component
 public class DataLoader implements ApplicationRunner {
 	
-	String[] flowerName = {"Rose","Tulip","Daisy","Carnation","Lily","Orchid","Hypericum","Sunflower"};
-	int[] flowerStock = {50,50,50,50,50,50,50,50};
-	float[] flowerPrice = {(float) 1.80,(float) 1.50,(float) 1.45,(float) 1.70,(float) 1.90,(float) 1.50,(float) 1.75,(float) 1.30};
+	String[] flowerName = {"Rose","Tulip","Daisy","Carnation","Lily","Orchid","Hypericum","Sunflower", "Peonies"};
+	int[] flowerStock = {50,50,50,50,50,50,50,50, 50};
+	float[] flowerPrice = {(float) 1.80,(float) 1.50,(float) 1.45,(float) 1.70,(float) 1.90,(float) 1.50,(float) 1.75,(float) 1.30, (float) 1.45};
 	
 	String[] packageName = {"Red Package", "White Package", "Yellow Package", "Colourful Package"};
-	String[][] packageFlowers = {{"Rose","Tulip","Hypericum"},{"Rose","Tulip","Hypericum"},{"Rose","Tulip","Hypericum"},{"Rose","Tulip","Hypericum"}};
-	String[][] packageItems = {{"Bear","Chocolates"},{"Bear","Chocolates"},{"Bear","Chocolates"},{"Bear","Chocolates"}};
+	String[][] packageFlowers = {{"Rose","Tulip","Carnation", "Peonies"},{"Daisy","Roses","Tulip", "Carnations", "Hypericum"},{"Rose","Tulip","Sunflowers"},{"Rose","Peonies","Lily", "Daisy"}};
+	String[][] packageItems = {{"Bear","Chocolates"},{"Bear","Balloon"},{"Balloon","Chocolates"},{"Bear"}};
 	int[] packageStock = {10,16,8,31};
 	float[] packagePrice = {(float) 11.80,(float) 12.50,(float) 13.45,(float) 15.70};
 	
@@ -67,23 +67,5 @@ public class DataLoader implements ApplicationRunner {
 		for (FlowerPackage p: packageRepo.findAll()) {
 			fp.add(p);
 		}
-	}
-	
-	public void placeOrder() throws Exception {
-		
-	}
-	
-	public FlowerPackage getPackageInfo(String name) throws Exception{
-		FlowerPackage selected;
-		
-		for (FlowerPackage p : fp) {
-			if(p.getName().equals(name)) {
-				selected = p;
-				break;
-			}
-		}
-		
-		System.out.println(selected.getPrice());
-		return selected;
 	}
 }

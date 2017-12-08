@@ -1,7 +1,5 @@
 package com.phillies.domain;
 
-import java.util.ArrayList;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,12 +8,12 @@ public class Order {
 	@Id
 	int orderId;
 
-	String firstName,lastName,emailAddress,mobileNo, packageName;
-	ArrayList<Flower> order = new ArrayList<>();
+	String firstName,lastName,emailAddress,mobileNo;
+	String packageName;
 	float price;
 
 	public Order(int orderId, String firstName, String lastName, String emailAddress, String mobileNo,
-			String packageName, ArrayList<Flower> order, float price) {
+			String packageName, float price) {
 		super();
 		this.orderId = orderId;
 		this.firstName = firstName;
@@ -23,7 +21,6 @@ public class Order {
 		this.emailAddress = emailAddress;
 		this.mobileNo = mobileNo;
 		this.packageName = packageName;
-		this.order = order;
 		this.price = price;
 	}
 
@@ -77,14 +74,6 @@ public class Order {
 	
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-	
-	public ArrayList<Flower> getOrder() {
-		return order;
-	}
-	
-	public void setOrder(ArrayList<Flower> order) {
-		this.order = order;
 	}
 	
 	public float getPrice() {

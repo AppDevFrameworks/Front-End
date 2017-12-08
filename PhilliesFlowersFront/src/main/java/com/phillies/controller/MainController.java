@@ -61,17 +61,29 @@ public class MainController {
 		model.addAttribute("mobile", "Customer Phone Number: " + order.getMobileNo());
 		model.addAttribute("package", "Package Chosen: " + packages);
 		
-		FlowerPackage pack = dl.getPackageInfo(packages);
-		
-		String flowers = "";
-		System.out.println(pack.getName());
-		for(String f: pack.getFlowers()) {
-			System.out.println(f);
-			flowers += f + " ";
+		String flowers = "Flowers Included: ";
+		float price = 0;
+		String item = "Items Included: ";
+		List<FlowerPackage> packs =  packageRepo.findAll();
+		for(FlowerPackage fp: packs) {
+			if(fp.getName().equals(packages)) {
+				price = fp.getPrice();
+				for(String f : fp.getItems()) {
+					item += f + " ";
+				}
+				for(String f : fp.getFlowers()) {
+					flowers += f + " ";
+				}
+			}
 		}
 		
 		model.addAttribute("flowers", flowers);
-		model.addAttribute("price", pack.getPrice());
+		model.addAttribute("items", item);		
+		model.addAttribute("price", "Price: €" + price);
+		
+		int id = (int) orderRepo.count();
+		orderRepo.save(new Order(id, order.getFirstName(), order.getLastName(), 
+				order.getEmailAddress(), order.getMobileNo(), packages, price));
 		
 		//model.addAttribute("status", orderMore("Red Flowers", 1000));
 		return "orderReturn";
