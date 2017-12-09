@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.jms.activemq.ActiveMQProperties.Packages"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="com.phillies.entities.DataLoader"/>
+<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Query"/>
+<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.phillies.domain.Order"/>
+<fullyQualifiedTypeName name="com.phillies.repository.OrderRepo"/>
+</qualifiedTypeNameHistroy>
