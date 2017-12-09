@@ -32,6 +32,7 @@
 					<option> --- Select One --- </option>
         			<option th:each="package : ${packages}" th:value="${package.name}" th:text="${package.name}" ></option>
     			</select>
+    			<label>Collection Date:</label><input type="date" name="collection"/>
 					<br/><button id="orderButton" type="submit">Submit Order</button>
 				</form>
 		</div>

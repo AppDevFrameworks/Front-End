@@ -1,5 +1,6 @@
 package com.phillies.controller;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,8 +60,13 @@ public class LoginController {
 			model.addAttribute("packageTitle", "Package:");
 			model.addAttribute("package", lastOrder.getPackageName());
 			model.addAttribute("priceTitle", "Package Price:");
-			model.addAttribute("price", "€" + lastOrder.getPrice());
-			System.out.println(account.getFirstname() + " " + account.getLastname());
+			
+			DecimalFormat df = new DecimalFormat("#.00");
+		    String angleFormated = df.format(lastOrder.getPrice());
+			
+			model.addAttribute("price", "€" + angleFormated);
+			model.addAttribute("dateTitle", "Collection Date:");
+			model.addAttribute("date", lastOrder.getDate());
 		}
 		else {
 			model.addAttribute("error", "No Orders have been made yet!");

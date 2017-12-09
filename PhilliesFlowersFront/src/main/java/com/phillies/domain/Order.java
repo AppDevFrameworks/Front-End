@@ -9,11 +9,11 @@ public class Order {
 	int orderId;
 
 	String firstName,lastName,emailAddress,mobileNo;
-	String packageName;
+	String packageName, date;
 	float price;
 
 	public Order(int orderId, String firstName, String lastName, String emailAddress, String mobileNo,
-			String packageName, float price) {
+			String packageName, String date, float price) {
 		super();
 		this.orderId = orderId;
 		this.firstName = firstName;
@@ -22,12 +22,22 @@ public class Order {
 		this.mobileNo = mobileNo;
 		this.packageName = packageName;
 		this.price = price;
+		this.date = date;
 	}
 
 	public Order() {
 		super();
 	}
 	
+	
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
 	public String getPackageName() {
 		return packageName;
 	}

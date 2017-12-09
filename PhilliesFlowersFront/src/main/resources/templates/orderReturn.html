@@ -23,13 +23,22 @@
 	<div id="main">
 		<p id="headline">Order Details</p>
 		<div id="orderSummary">
+			<p id="sublineTitle">Customer Name: </p>
 			<p id="subline" th:text="${customer}" />
+			<p id="sublineTitle">Customer e-mail: </p>
 			<p id="subline" th:text="${email}" />
+			<p id="sublineTitle">Customer Phone number: </p>
 			<p id="subline" th:text="${mobile}" />
+			<p id="sublineTitle">Chosen Package: </p>
 			<p id="subline" th:text="${package}" />
+			<p id="sublineTitle">Flowers Included: </p>
 			<p id="subline" th:text="${flowers}" />
+			<p id="sublineTitle">Price: </p>
 			<p id="subline" th:text="${price}" />
+			<p id="sublineTitle">Items included: </p>
 			<p id="subline" th:text="${items}" />
+			<p id="sublineTitle">Collection Date: </p>
+			<p id="subline" th:text="${collection}" />
 
 		</div>
 	</div>

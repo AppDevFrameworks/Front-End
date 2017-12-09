@@ -14,20 +14,20 @@ a {
 #panelError {
 	font-size: 1.2em;
 	font-family: "Arial";
-  	text-align: left;
+  text-align: left;
 	margin-left: 5%;
 	float: left;
-  	color: #fff;
+  color: #fff;
 }
 
 #panelText {
 	font-size: 1.2em;
 	font-family: "Arial";
 	width: 40%;
-  	text-align: left;
+  text-align: left;
 	margin-left: 5%;
 	float: left;
-  	color: #fff;
+  color: #fff;
 }
 
 #panelT {
@@ -58,10 +58,22 @@ a {
 	height: 50vh;
 }
 
+#sublineTitle{
+	font-family: "Arial";
+	font-size: 1.3em;
+	margin-left: 5%;
+	font-weight: bold;
+	width: 40%;
+	float: left;
+	height: 0.5vh;
+}
 #subline {
 	font-family: "Arial";
 	font-size: 1.3em;
-	margin-left: 2%;
+	margin-right: 5%;
+	width: 50%;
+	float: left;
+	height: 0.5vh;
 }
 
 #paneTitle {
