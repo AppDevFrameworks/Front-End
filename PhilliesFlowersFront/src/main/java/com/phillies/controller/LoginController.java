@@ -50,10 +50,10 @@ public class LoginController {
 		String logged = "Currently Logged in as: " + account.getFirstname() + " " + account.getLastname();
 		model.addAttribute("currentlyLogged", logged);
 		int lastIndex = (int) (orderRepo.count()-1);
-
+		
 		if(lastIndex != -1) {
+			model.addAttribute("title", "Most Recent Order");
 			Order lastOrder = orderRepo.findAll().get(lastIndex);
-			System.out.println(lastOrder.getPackageName());
 			String name = lastOrder.getFirstName() + " " + lastOrder.getLastName();
 			model.addAttribute("nameTitle", "Customer Name:");
 			model.addAttribute("name", name);
@@ -69,7 +69,7 @@ public class LoginController {
 			model.addAttribute("date", lastOrder.getDate());
 		}
 		else {
-			model.addAttribute("error", "No Orders have been made yet!");
+			model.addAttribute("title", "No Orders have been made yet!");
 		}
 		return "loginDashboard";
 	}

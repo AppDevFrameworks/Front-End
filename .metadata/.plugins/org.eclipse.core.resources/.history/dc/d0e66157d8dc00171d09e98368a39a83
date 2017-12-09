@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Phillies Flowers | Order Details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/main.css" th:href="@{/main.css}" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two'
+	rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div id="head">
+		<p id="headTitle">Phillies Flowers</p>
+		<div id="navBar">
+			<ul>
+				<li><a href="http://localhost:8070">Home</a></li>
+				<li>Make Order</li>
+				<li>Packages</li>
+				<li><a href="http://localhost:8070/login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<p id="headline">Order Details</p>
+		<div id="orderSummary">
+			<p id="sublineTitle">Customer Name: </p>
+			<p id="subline" th:text="${customer}" />
+			<p id="sublineTitle">Customer e-mail: </p>
+			<p id="subline" th:text="${email}" />
+			<p id="sublineTitle">Customer Phone number: </p>
+			<p id="subline" th:text="${mobile}" />
+			<p id="sublineTitle">Chosen Package: </p>
+			<p id="subline" th:text="${package}" />
+			<p id="sublineTitle">Flowers Included: </p>
+			<p id="subline" th:text="${flowers}" />
+			<p id="sublineTitle">Price: </p>
+			<p id="subline" th:text="${price}" />
+			<p id="sublineTitle">Items included: </p>
+			<p id="subline" th:text="${items}" />
+			<p id="sublineTitle">Collection Date: </p>
+			<p id="subline" th:text="${collection}" /></br>
+		</div>
+
+		<div id="form">
+			<form action="#" th:action="@{/payment}" th:object="${payment}" method="post">
+				<label>Credit Card No:</label><input type="text" th:field="*{firstName}" /><br/>
+				<label>Cardholder:</label><input type="text" th:field="*{lastName}" /><br/>
+				<label>Month:</label>
+				<select class="input" id="month" name="month">
+					<option> -- </option>
+        			<option th:each="month : ${month}" th:value="${month}" th:text="${package.name}" ></option>
+    			</select>
+
+
+
+				<label>Year:</label><input type="text" th:field="*{mobileNo}" /></br>
+				<label>CVC:</label><input type="text" th:field="*{mobileNo}" />
+				<br/><button id="orderButton" type="submit">Proceed</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

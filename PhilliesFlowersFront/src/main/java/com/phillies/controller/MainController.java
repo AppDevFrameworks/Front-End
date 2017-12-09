@@ -10,6 +10,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,12 +42,29 @@ public class MainController {
 	OrderRepo orderRepo;
 	
 	DataLoader dl = new DataLoader();
+	
+	String pk="", dt="", fn="", ln="", em="", mn="";
+	float pr = 0;
+	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String index(Model model, Order order) {
 		model.addAttribute("order", order);
 		List<FlowerPackage> packages =  packageRepo.findAll();
 		model.addAttribute("packages", packages);
 		return "index";
+	}
+	
+	@RequestMapping(value="/payment", method=RequestMethod.POST)
+	public String payment(@RequestParam String cardNo, Order order, Model model, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "orderReturn";
+		}
+		
+		int id = (int) orderRepo.count();
+		orderRepo.save(new Order(id, fn, ln, em, mn, pk, dt, pr));
+				
+	
+		return "payment";
 	}
 	
 	@RequestMapping(value="/order", method=RequestMethod.POST)
@@ -86,7 +105,13 @@ public class MainController {
 				}
 			}
 		}
-		
+		pk = packages;
+		dt = date;
+		pr = price;
+		fn = order.getFirstName();
+		ln = order.getLastName();
+		mn = order.getMobileNo();
+		em = order.getEmailAddress();
 		DecimalFormat df = new DecimalFormat("#.00");
 	    String angleFormated = df.format(price);
 		
@@ -94,11 +119,27 @@ public class MainController {
 		model.addAttribute("items", item);		
 		model.addAttribute("price", "€" + angleFormated);
 		
-		int id = (int) orderRepo.count();
-		orderRepo.save(new Order(id, order.getFirstName(), order.getLastName(), 
-				order.getEmailAddress(), order.getMobileNo(), packages, date, price));
-		
 		//model.addAttribute("status", orderMore("Red Flowers", 1000));
+		
+		
+		ArrayList<String> mon = new ArrayList<>();
+		ArrayList<String> year = new ArrayList<>();
+		for(int i = 1; i <= 12; i++) {
+			if(i < 10)
+				mon.add("0"+i);
+			else
+				mon.add(""+i);
+		}
+		
+		int yr = Calendar.getInstance().get(Calendar.YEAR);
+		
+		for(int i = 0; i <= 10; i++) {
+			year.add(""+(yr+i));
+		}
+		
+		model.addAttribute("months", mon);
+		model.addAttribute("years", year);
+		
 		return "orderReturn";
 	}
 	

@@ -14,20 +14,20 @@ a {
 #panelError {
 	font-size: 1.2em;
 	font-family: "Arial";
-  text-align: left;
+  	text-align: left;
 	margin-left: 5%;
 	float: left;
-  color: #fff;
+  	color: #fff;
 }
 
 #panelText {
 	font-size: 1.2em;
 	font-family: "Arial";
 	width: 40%;
-  text-align: left;
+  	text-align: left;
 	margin-left: 5%;
 	float: left;
-  color: #fff;
+  	color: #fff;
 }
 
 #panelT {
@@ -46,6 +46,8 @@ a {
 	margin-left: 10%;
 	background-color: rgba(255, 250, 250, 0.8);
 	float: left;
+	padding-bottom: 2vh;
+	margin-bottom: 5vh;
 }
 
 #orderPane {
@@ -65,7 +67,7 @@ a {
 	font-weight: bold;
 	width: 40%;
 	float: left;
-	height: 0.5vh;
+	height: 1vh;
 }
 #subline {
 	font-family: "Arial";
@@ -73,7 +75,7 @@ a {
 	margin-right: 5%;
 	width: 50%;
 	float: left;
-	height: 0.5vh;
+	height: 1vh;
 }
 
 #paneTitle {
@@ -121,6 +123,7 @@ a {
 
 #form {
 	padding: 2%;
+	float: left;
 	width: 70%;
 	margin-left: 13%;
 	background-color: rgba(26, 0, 0, 0.6);
@@ -144,6 +147,12 @@ input {
 
 .input {
 	width: 30%;
+	font-size: 1.2em;
+	margin-top: 0.5%;
+}
+
+.small-input {
+	width: 10%;
 	font-size: 1.2em;
 	margin-top: 0.5%;
 }

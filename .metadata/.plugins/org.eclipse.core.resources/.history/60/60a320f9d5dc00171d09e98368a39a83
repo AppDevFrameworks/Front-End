@@ -1,0 +1,5 @@
+package com.phillies.domain;
+
+public class Payment {
+
+}
