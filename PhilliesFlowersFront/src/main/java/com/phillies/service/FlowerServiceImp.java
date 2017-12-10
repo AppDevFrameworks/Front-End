@@ -16,26 +16,34 @@ public class FlowerServiceImp implements FlowerService {
 
 	@Override
 	public Flower getFlower(String name) {
-		System.out.println("INPUT:" + name);
 		Flower flower = new Flower();
 		List<Flower> flowers = flowerRepo.findAll();
 		for(Flower f:flowers) {
 			if(f.getName().equalsIgnoreCase(name))
 				flower = f;
 		}
-		System.out.println(flower.getName());
 		return flower;
 	}
-	
+
 	@Override
-	public void updateFlowerStock(String name) {
+	public int updateFlowerStock(String name, boolean flag, int amount) {
+		System.out.println(amount);
 		Flower flower = getFlower(name);
-		int stock = flower.getStock()-5;
+		int stock = 0;
+		if(flag)
+			stock = flower.getStock()-amount;
+		else
+			stock = flower.getStock()+amount;
 		flower.setStock(stock);
-		System.out.println(flower.getName() + " " + flower.getStock());
 		flowerRepo.save(new Flower(flower.getId(), flower.getName(), flower.getStock(), flower.getPrice()));
-		
+		return flower.getStock();
 	}
-	
+
+	@Override
+	public int getStock(String name) {
+		Flower flower = getFlower(name);
+		return flower.getStock();
+	}
+
 
 }

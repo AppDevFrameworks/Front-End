@@ -48,7 +48,6 @@ INDEX VERSION 1.130+C:\Users\rober\Documents\GitHub\Front-End\.metadata\.plugins
 2578537385.index
 2567008206.index
 289811613.index
-1404187324.index
 2517018036.index
 604550423.index
 3065053440.index

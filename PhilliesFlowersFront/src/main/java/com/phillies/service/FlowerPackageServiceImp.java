@@ -46,5 +46,12 @@ public class FlowerPackageServiceImp implements FlowerPackageService {
 		String[] flowers = flowerPackage.getFlowers();
 		return flowers;
 	}
+
+	@Override
+	public String[] getItems(String pack) {
+		FlowerPackage flowerPackage = getPackage(pack);
+		String[] items = flowerPackage.getItems();
+		return items;
+	}
 	
 }

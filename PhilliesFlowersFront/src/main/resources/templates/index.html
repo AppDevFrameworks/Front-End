@@ -29,38 +29,38 @@
 	}
 	</script>
 	<div id="head">
-		<p id="headTitle">Phillies Flowers</p>
+		<p id="headTitle" th:text="#{heading}">Phillie</p>
 		<div id="navBar">
 			<ul>
-				<li><a href="http://localhost:8070">Home</a></li>
-				<li>Make Order</li>
-				<li>Packages</li>
-				<li><a href="http://localhost:8070/login">Login</a></li>
+				<li><a href="http://localhost:8070" th:text="#{nav.home}">A</a></li>
+				<li th:text="#{nav.order}">A</li>
+				<li th:text="#{nav.pack}">A</li>
+				<li><a href="http://localhost:8070/login" th:text="#{nav.login}">A</a></li>
 			</ul>
 		</div>
 	</div>
 	<div id="main">
-		<p id="headline">Create your order for that someone special</p>
+		<p id="headline"  th:text="#{index.headline}">Headline</p>
 		<div id="form">
 			<form action="#" th:action="@{/order}" th:object="${order}"
 				method="post">
-				<label th:placeholder="#{fName}">First Name:</label>
+				<label th:text="#{index.fName}">fname</label>
 				<input type="text" th:field="*{firstName}" /><br /> 
 				<p id="error" th:if="${#fields.hasErrors('firstName')}" th:text="#{error.fName}">First Name Error</p>				
-				<label>Last Name:</label>
+				<label th:text="#{index.lName}">lname</label>
 				<input type="text" th:field="*{lastName}" /><br /> 
 				<p id="error" th:if="${#fields.hasErrors('lastName')}" th:text="#{error.lName}">Last Name Error</p>								
-				<label>Mobile Number:</label>
+				<label th:text="#{index.mobile}">Mobile</label>
 				<input type="text" th:field="*{mobileNo}" /><br /> 
 				<p id="error" th:if="${#fields.hasErrors('mobileNo')}" th:text="#{error.mobile}">Mobile Number Error</p>				
-				<label>E-mail Address:</label>
+				<label th:text="#{index.email}">E-mail</label>
 				<input type="text" th:field="*{emailAddress}" /><br />
 				<p id="error" th:if="${#fields.hasErrors('emailAddress')}" th:text="#{error.email}">First Name Error</p>				 
-				<label>Select Package:</label>
+				<label th:text="#{index.package}">Package</label>
 				<select class="input" id="package" name="packages">
 					<option th:each="package : ${packages}" th:value="${package.name}" th:text="${package.name}"></option>
 				</select> 
-				<label>Collection Date:</label>
+				<label th:text="#{index.date}">Date:</label>
 				<input id="datepicker" type="date" name="collection" min="2017-01-01"/> <br />
 				<button id="orderButton" type="submit">Submit Order</button>
 			</form>

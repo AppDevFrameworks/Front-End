@@ -19,7 +19,7 @@ import com.phillies.repository.OrderRepo;
 public class DataLoader implements ApplicationRunner {
 	
 	String[] flowerName = {"Rose","Tulip","Daisy","Carnation","Lily","Orchid","Hypericum","Sunflower", "Peonie"};
-	int[] flowerStock = {50,50,50,50,50,50,50,50, 50};
+	int[] flowerStock = {10,50,50,50,50,50,50,50, 50};
 	float[] flowerPrice = {(float) 1.80,(float) 1.50,(float) 1.45,(float) 1.70,(float) 1.90,(float) 1.50,(float) 1.75,(float) 1.30, (float) 1.45};
 	
 	String[] packageName = {"Red Package", "White Package", "Yellow Package", "Colourful Package"};

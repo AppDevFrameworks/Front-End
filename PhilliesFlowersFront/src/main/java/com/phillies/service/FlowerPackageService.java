@@ -8,5 +8,6 @@ public interface FlowerPackageService {
 	public FlowerPackage getPackage(String name);
 	public List<FlowerPackage> getPackages();
 	public void updatePackageStock(String pack);
-	public String[] getFlowers(String pack);	
+	public String[] getFlowers(String pack);
+	public String[] getItems(String pack);
 }

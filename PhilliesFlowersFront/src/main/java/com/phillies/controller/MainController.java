@@ -10,8 +10,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -41,7 +39,7 @@ public class MainController {
 
 	@Autowired
 	FlowerPackageService flowerPackageService;
-	
+
 	@Autowired
 	FlowerService flowerService;
 
@@ -60,7 +58,7 @@ public class MainController {
 	public String index(Model model, Order order) {
 		model.addAttribute("order", order);
 		List<FlowerPackage> pack = flowerPackageService.getPackages();
-		
+
 		for(int i = 0; i < pack.size(); i++) {
 			FlowerPackage p = pack.get(i);
 			if(p.getStock() <= 0) {
@@ -71,18 +69,21 @@ public class MainController {
 		return "index";
 	}
 
-	@RequestMapping(value="/payment", method=RequestMethod.POST)
-	public String payment(Order order, Model model, BindingResult bindingResult) {
-		if (bindingResult.hasErrors()) {
-			return "orderReturn";
-		}
+	@RequestMapping(value="/confirm", method=RequestMethod.POST)
+	public String confirm(Order order) throws MalformedURLException, IOException {
 		orderService.createOrder(new Order(orderService.getNextId(), fn, ln, em, mn, pk, dt, pr));
-		flowerPackageService.updatePackageStock(pk);
 		String[] flowers = flowerPackageService.getFlowers(pk);
 		for(String flower: flowers) {
-			flowerService.updateFlowerStock(flower);
+			System.out.println(flower);
+			flowerService.updateFlowerStock(flower, true, 5);
+			if(flowerService.getStock(flower)<= 5) {
+				String status = newOrder(flower,50);
+				if(status.equals("{\"code\":1}")) {
+					flowerService.updateFlowerStock(flower, false, 50);
+				}
+			}
 		}
-		return "payment";
+		return "confirm";
 	}
 
 	@RequestMapping(value="/order", method=RequestMethod.POST)
@@ -91,86 +92,46 @@ public class MainController {
 			index(model, order);
 			return "index";
 		}
+
+		String date = formatDate(collection);
+
 		model.addAttribute("customer", order.getFirstName() + " " + order.getLastName());
 		model.addAttribute("email", order.getEmailAddress());
 		model.addAttribute("mobile", order.getMobileNo());
 		model.addAttribute("package", packages);
-
-		String date = collection.substring(8,10) + " / " + collection.substring(5, 7) + " / " + collection.substring(0,4);
 		model.addAttribute("collection", date);		
 
-		String flowers = "";
-		float price = 0;
-		String item = "";
-		List<FlowerPackage> pack = flowerPackageService.getPackages();
-		
-		for(FlowerPackage fp: pack) {
-			if(fp.getName().equals(packages)) {
-				price = fp.getPrice();
+		String itemString = itemsToString(packages);
+		String flowerString = flowersToString(packages);
+		FlowerPackage flowerPackage = flowerPackageService.getPackage(packages);
 
-				String[] ite = fp.getItems();
-				for(int i = 0; i < ite.length; i++) {
-					if(i != ite.length-1)
-						item += ite[i] + ", ";
-					else
-						item += ite[i];
-				}
-
-				String[] f = fp.getFlowers();
-				for(int i = 0; i < f.length; i++) {
-					if(i != f.length-1)
-						flowers += f[i] + ", ";
-					else
-						flowers += f[i];
-				}
-			}
-		}
 		pk = packages;
 		dt = date;
-		pr = price;
+		pr = flowerPackage.getPrice();
 		fn = order.getFirstName();
 		ln = order.getLastName();
 		mn = order.getMobileNo();
 		em = order.getEmailAddress();
 		DecimalFormat df = new DecimalFormat("#.00");
-		String angleFormated = df.format(price);
+		String angleFormated = df.format(flowerPackage.getPrice());
 
-		model.addAttribute("flowers", flowers);
-		model.addAttribute("items", item);		
+		model.addAttribute("flowers", flowerString);
+		model.addAttribute("items", itemString);		
 		model.addAttribute("price", "€" + angleFormated);
 
-		ArrayList<String> mon = new ArrayList<>();
-		ArrayList<String> year = new ArrayList<>();
-		for(int i = 1; i <= 12; i++) {
-			if(i < 10)
-				mon.add("0"+i);
-			else
-				mon.add(""+i);
-		}
-		int yr = Calendar.getInstance().get(Calendar.YEAR);
-		for(int i = 0; i <= 10; i++) {
-			year.add(""+(yr+i));
-		}
-
-		model.addAttribute("months", mon);
-		model.addAttribute("years", year);
-
-		System.out.println(newOrder("Lily",100));
 		return "orderReturn";
 	}
 
 	public String newOrder(String item, int amount) throws MalformedURLException, IOException {
 		String url = "http://localhost:8090/getOrder?name=rob&pass=pass&item="+item+"-"+amount;
-		//getOrder?name=NAME&pass=PASS&item=ITEM-AMOUNT
 		String charset = "UTF-8";
-		String query = String.format("item=%s&amount=%s", 
-				URLEncoder.encode(item, charset), 
-				URLEncoder.encode(amount+"", charset));
-		//url = url+=query;
 		URLConnection connection = new URL(url).openConnection();
 		connection.setDoOutput(true); // Triggers POST.
 		connection.setRequestProperty("Accept-Charset", charset);
 		connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
+		String query = String.format("item=%s&amount=%s", 
+				URLEncoder.encode(item, charset), 
+				URLEncoder.encode(amount+"", charset));
 
 		try (OutputStream output = connection.getOutputStream()) {
 			output.write(query.getBytes(charset));
@@ -183,33 +144,34 @@ public class MainController {
 		while((line = reader.readLine()) != null) {
 			result.append(line);
 		}
-		System.out.println(result.toString());
 		return result.toString();
 	}
 
-	public String orderPackages(String item, int amount) throws MalformedURLException, IOException {
-		String url = "http://localhost:8090/getOrder";
-		String charset = "UTF-8";
-		String query = String.format("item=%s&amount=%s", 
-				URLEncoder.encode(item, charset), 
-				URLEncoder.encode(amount+"", charset));
-		URLConnection connection = new URL(url).openConnection();
-		connection.setDoOutput(true); // Triggers POST.
-		connection.setRequestProperty("Accept-Charset", charset);
-		connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
+	public String formatDate(String d) {
+		return d.substring(8,10) + " / " + d.substring(5, 7) + " / " + d.substring(0,4);
+	}
 
-		try (OutputStream output = connection.getOutputStream()) {
-			output.write(query.getBytes(charset));
+	public String itemsToString(String packages) {
+		String[] items = flowerPackageService.getItems(packages);
+		String itemString = "";
+		for(int i = 0; i < items.length; i++) {
+			if(i != items.length-1)
+				itemString += items[i] + ", ";
+			else
+				itemString += items[i];
 		}
+		return itemString;
+	}
 
-		InputStream response = connection.getInputStream();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(response));
-		StringBuilder result = new StringBuilder();
-		String line;
-		while((line = reader.readLine()) != null) {
-			result.append(line);
+	public String flowersToString(String packages) {
+		String[] flowers = flowerPackageService.getFlowers(packages);
+		String flowerString = "";
+		for(int i = 0; i < flowers.length; i++) {
+			if(i != flowers.length-1)
+				flowerString += flowers[i] + ", ";
+			else
+				flowerString += flowers[i];
 		}
-		System.out.println(result.toString());
-		return result.toString();
+		return flowerString;
 	}
 }
