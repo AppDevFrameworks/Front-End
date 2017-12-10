@@ -43,18 +43,6 @@
 
 		<div id="form">
 			<form action="#" th:action="@{/payment}" th:object="${payment}" method="post">
-				<label>Credit Card No:</label><input type="text" name="cardNo" />
-				<label>Cardholder:</label><input type="text" name="cardholder" />
-				<label>Expiration:</label>
-				<select class="small-input" id="month" name="month">
-					<option>--</option>
-					<option th:each="month : ${months}" th:value="${month}" th:text="${month}"></option>
-				</select>
-				<select class="small-input" id="year" name="year">
-					<option>----</option>
-					<option th:each="year : ${years}" th:value="${year}" th:text="${year}"></option>
-				</select>
-				<label>CVC:</label><input class="small-input" type="text" name="cvc"/>
 				<button id="orderButton" type="submit">Proceed</button>
 			</form>
 		</div>

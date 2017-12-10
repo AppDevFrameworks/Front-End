@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Phillies Flowers | Order Details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/main.css" th:href="@{/main.css}" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two'
+	rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div id="head"> 
+		<p id="headTitle">Phillies Flowers</p>
+		<div id="navBar">
+			<ul>
+				<li><a href="http://localhost:8070">Home</a></li>
+				<li>Make Order</li>
+				<li>Packages</li>
+				<li><a href="http://localhost:8070/login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<p id="headline">Current Orders</p>
+		<div id="orderSummary">
+			<table class="normalTable">
+				<tr class="stockTableTitle" style="text-align: left;">
+					<th>Package</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Price (€)</th>
+					<th>Collection Date</th>
+				</tr>
+				<tr th:each="order : ${orders}" class="stockTableMain">
+					<td th:text="${order.packageName}"></td>
+					<td th:text="${order.firstName}"></td>
+					<td th:text="${order.lastName}"></td>
+					<td th:text="${order.price}"></td>
+					<td th:text="${order.date}"></td>
+				</tr>
+			</table>	
+		</div>
+	</div>
+</body>
+</html>

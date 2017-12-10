@@ -1,5 +1,10 @@
 package com.phillies.domain;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,9 +13,25 @@ public class Order {
 	@Id
 	int orderId;
 
-	String firstName,lastName,emailAddress,mobileNo;
-	String packageName, date;
-	float price;
+	@NotNull
+	@Size(min=2,max=30)
+	private String firstName;
+	
+	@NotNull
+	@Size(min=2,max=30)
+	private String lastName; 
+	
+	@NotNull
+	@Email(message = "Email should be valid")
+	@Length(min=6)
+	private String emailAddress;
+	
+	@Size(min=10,max=10)
+	private String mobileNo;
+	
+	private String packageName;
+	private String date;
+	private float price;
 
 	public Order(int orderId, String firstName, String lastName, String emailAddress, String mobileNo,
 			String packageName, String date, float price) {

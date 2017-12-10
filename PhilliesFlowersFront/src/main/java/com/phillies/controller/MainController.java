@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,69 +27,87 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.phillies.domain.FlowerPackage;
 import com.phillies.domain.Order;
 import com.phillies.entities.DataLoader;
+import com.phillies.repository.FlowerPackageRepo;
 import com.phillies.repository.FlowerRepo;
-import com.phillies.repository.OrderRepo;
-import com.phillies.repository.PackageRepo;
+import com.phillies.service.FlowerPackageService;
+import com.phillies.service.FlowerService;
+import com.phillies.service.OrderService;
 
 @Controller
 public class MainController {
 
 	@Autowired
+	OrderService orderService;
+
+	@Autowired
+	FlowerPackageService flowerPackageService;
+	
+	@Autowired
+	FlowerService flowerService;
+
+	@Autowired
 	FlowerRepo flowerRepo;
-	
+
 	@Autowired
-	PackageRepo packageRepo;
-	
-	@Autowired
-	OrderRepo orderRepo;
-	
+	FlowerPackageRepo flowerPackageRepo;
+
 	DataLoader dl = new DataLoader();
-	
+
 	String pk="", dt="", fn="", ln="", em="", mn="";
 	float pr = 0;
-	
+
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String index(Model model, Order order) {
 		model.addAttribute("order", order);
-		List<FlowerPackage> packages =  packageRepo.findAll();
-		model.addAttribute("packages", packages);
+		List<FlowerPackage> pack = flowerPackageService.getPackages();
+		
+		for(int i = 0; i < pack.size(); i++) {
+			FlowerPackage p = pack.get(i);
+			if(p.getStock() <= 0) {
+				pack.remove(i);
+			}
+		}
+		model.addAttribute("packages", pack);
 		return "index";
 	}
-	
+
 	@RequestMapping(value="/payment", method=RequestMethod.POST)
-	public String payment(@RequestParam String cardNo, Order order, Model model, BindingResult bindingResult) {
+	public String payment(Order order, Model model, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "orderReturn";
 		}
-		
-		int id = (int) orderRepo.count();
-		orderRepo.save(new Order(id, fn, ln, em, mn, pk, dt, pr));
-				
-	
+		orderService.createOrder(new Order(orderService.getNextId(), fn, ln, em, mn, pk, dt, pr));
+		flowerPackageService.updatePackageStock(pk);
+		String[] flowers = flowerPackageService.getFlowers(pk);
+		for(String flower: flowers) {
+			flowerService.updateFlowerStock(flower);
+		}
 		return "payment";
 	}
-	
+
 	@RequestMapping(value="/order", method=RequestMethod.POST)
-	public String orderSubmit(Order order, @RequestParam String collection, @RequestParam String packages , BindingResult bindingResult, Model model) throws Exception {
-		if (bindingResult.hasErrors()) {
+	public String orderSubmit(@Valid Order order, BindingResult bindingResult, @RequestParam String collection, @RequestParam String packages , Model model) throws Exception {
+		if (bindingResult.hasFieldErrors()) {
+			index(model, order);
 			return "index";
 		}
 		model.addAttribute("customer", order.getFirstName() + " " + order.getLastName());
 		model.addAttribute("email", order.getEmailAddress());
 		model.addAttribute("mobile", order.getMobileNo());
 		model.addAttribute("package", packages);
-		
+
 		String date = collection.substring(8,10) + " / " + collection.substring(5, 7) + " / " + collection.substring(0,4);
 		model.addAttribute("collection", date);		
-		
+
 		String flowers = "";
 		float price = 0;
 		String item = "";
-		List<FlowerPackage> packs =  packageRepo.findAll();
-		for(FlowerPackage fp: packs) {
+		List<FlowerPackage> pack = flowerPackageService.getPackages();
+		
+		for(FlowerPackage fp: pack) {
 			if(fp.getName().equals(packages)) {
 				price = fp.getPrice();
-				
+
 				String[] ite = fp.getItems();
 				for(int i = 0; i < ite.length; i++) {
 					if(i != ite.length-1)
@@ -95,7 +115,7 @@ public class MainController {
 					else
 						item += ite[i];
 				}
-				
+
 				String[] f = fp.getFlowers();
 				for(int i = 0; i < f.length; i++) {
 					if(i != f.length-1)
@@ -113,15 +133,12 @@ public class MainController {
 		mn = order.getMobileNo();
 		em = order.getEmailAddress();
 		DecimalFormat df = new DecimalFormat("#.00");
-	    String angleFormated = df.format(price);
-		
+		String angleFormated = df.format(price);
+
 		model.addAttribute("flowers", flowers);
 		model.addAttribute("items", item);		
 		model.addAttribute("price", "€" + angleFormated);
-		
-		//model.addAttribute("status", orderMore("Red Flowers", 1000));
-		
-		
+
 		ArrayList<String> mon = new ArrayList<>();
 		ArrayList<String> year = new ArrayList<>();
 		for(int i = 1; i <= 12; i++) {
@@ -130,32 +147,31 @@ public class MainController {
 			else
 				mon.add(""+i);
 		}
-		
 		int yr = Calendar.getInstance().get(Calendar.YEAR);
-		
 		for(int i = 0; i <= 10; i++) {
 			year.add(""+(yr+i));
 		}
-		
+
 		model.addAttribute("months", mon);
 		model.addAttribute("years", year);
-		
+
+		//System.out.println(newOrder("Lily",100));
 		return "orderReturn";
 	}
-	
-	public String orderMore(String item, int amount) throws MalformedURLException, IOException {
+
+	public String newOrder(String item, int amount) throws MalformedURLException, IOException {
 		String url = "http://localhost:8090/getOrder";
 		String charset = "UTF-8";
 		String query = String.format("item=%s&amount=%s", 
-			     URLEncoder.encode(item, charset), 
-			     URLEncoder.encode(amount+"", charset));
+				URLEncoder.encode(item, charset), 
+				URLEncoder.encode(amount+"", charset));
 		URLConnection connection = new URL(url).openConnection();
 		connection.setDoOutput(true); // Triggers POST.
 		connection.setRequestProperty("Accept-Charset", charset);
 		connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
 
 		try (OutputStream output = connection.getOutputStream()) {
-		    output.write(query.getBytes(charset));
+			output.write(query.getBytes(charset));
 		}
 
 		InputStream response = connection.getInputStream();
@@ -163,7 +179,33 @@ public class MainController {
 		StringBuilder result = new StringBuilder();
 		String line;
 		while((line = reader.readLine()) != null) {
-		    result.append(line);
+			result.append(line);
+		}
+		System.out.println(result.toString());
+		return result.toString();
+	}
+
+	public String orderPackages(String item, int amount) throws MalformedURLException, IOException {
+		String url = "http://localhost:8090/getOrder";
+		String charset = "UTF-8";
+		String query = String.format("item=%s&amount=%s", 
+				URLEncoder.encode(item, charset), 
+				URLEncoder.encode(amount+"", charset));
+		URLConnection connection = new URL(url).openConnection();
+		connection.setDoOutput(true); // Triggers POST.
+		connection.setRequestProperty("Accept-Charset", charset);
+		connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + charset);
+
+		try (OutputStream output = connection.getOutputStream()) {
+			output.write(query.getBytes(charset));
+		}
+
+		InputStream response = connection.getInputStream();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(response));
+		StringBuilder result = new StringBuilder();
+		String line;
+		while((line = reader.readLine()) != null) {
+			result.append(line);
 		}
 		System.out.println(result.toString());
 		return result.toString();

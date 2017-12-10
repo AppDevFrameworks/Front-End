@@ -11,6 +11,38 @@ a {
 	color: #fff;
 }
 
+#error{
+	margin-left: 23%;
+	font-size: 1.2em;
+	color: #f00;
+	font-family: "Arial";
+	line-height: 20%;
+}
+
+.normalTable{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-family: "Arial";
+	float: left;
+}
+
+.stockTable{
+	width: 40%;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-family: "Arial";
+	float: left;
+}
+
+.stockTableHead{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+.stockTableMain{
+	font-size: 1.2em;
+}
+
 #panelError {
 	font-size: 1.2em;
 	font-family: "Arial";
@@ -69,10 +101,11 @@ a {
 	float: left;
 	height: 1vh;
 }
+
 #subline {
 	font-family: "Arial";
 	font-size: 1.3em;
-	margin-right: 5%;
+	margin-left: 5%;
 	width: 50%;
 	float: left;
 	height: 1vh;

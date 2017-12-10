@@ -5,30 +5,27 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.phillies.domain.Account;
 import com.phillies.domain.Flower;
 import com.phillies.domain.FlowerPackage;
-import com.phillies.domain.Order;
 import com.phillies.repository.AccountRepo;
+import com.phillies.repository.FlowerPackageRepo;
 import com.phillies.repository.FlowerRepo;
 import com.phillies.repository.OrderRepo;
-import com.phillies.repository.PackageRepo;
 
 @Component
 public class DataLoader implements ApplicationRunner {
 	
-	String[] flowerName = {"Rose","Tulip","Daisy","Carnation","Lily","Orchid","Hypericum","Sunflower", "Peonies"};
+	String[] flowerName = {"Rose","Tulip","Daisy","Carnation","Lily","Orchid","Hypericum","Sunflower", "Peonie"};
 	int[] flowerStock = {50,50,50,50,50,50,50,50, 50};
 	float[] flowerPrice = {(float) 1.80,(float) 1.50,(float) 1.45,(float) 1.70,(float) 1.90,(float) 1.50,(float) 1.75,(float) 1.30, (float) 1.45};
 	
 	String[] packageName = {"Red Package", "White Package", "Yellow Package", "Colourful Package"};
-	String[][] packageFlowers = {{"Rose","Tulip","Carnation", "Peonies"},{"Daisy","Roses","Tulip", "Carnations", "Hypericum"},{"Rose","Tulip","Sunflowers"},{"Rose","Peonies","Lily", "Daisy"}};
+	String[][] packageFlowers = {{"Rose","Tulip","Carnation", "Peonie"},{"Daisy","Rose","Tulip", "Carnation", "Hypericum"},{"Rose","Tulip","Sunflower"},{"Rose","Peonie","Lily", "Daisy"}};
 	String[][] packageItems = {{"Bear","Chocolates"},{"Bear","Balloon"},{"Balloon","Chocolates"},{"Bear"}};
-	int[] packageStock = {10,16,8,31};
+	int[] packageStock = {1,16,8,31};
 	float[] packagePrice = {(float) 11.80,(float) 12.50,(float) 13.45,(float) 15.70};
 	
 	String[] firstname = {"Phillie","Jasmine","Simon","Rob","Jer"};
@@ -42,7 +39,7 @@ public class DataLoader implements ApplicationRunner {
 	FlowerRepo flowerRepo;
 	
 	@Autowired
-	PackageRepo packageRepo;
+	FlowerPackageRepo flowerPackageRepo;
 	
 	@Autowired
 	AccountRepo accountRepo;
@@ -57,14 +54,14 @@ public class DataLoader implements ApplicationRunner {
 		}
 		
 		for(int i = 0; i < packageName.length; i++) {
-			packageRepo.save(new FlowerPackage(1+i, packageName[i], packageFlowers[i], packageItems[i],packageStock[i],packagePrice[i]));
+			flowerPackageRepo.save(new FlowerPackage(1+i, packageName[i], packageFlowers[i], packageItems[i],packageStock[i],packagePrice[i]));
 		}
 		
 		for(int i = 0; i < username.length; i++) {
 			accountRepo.save(new Account(username[i],password[i],firstname[i],lastname[i]));
 		}
 		
-		for (FlowerPackage p: packageRepo.findAll()) {
+		for (FlowerPackage p: flowerPackageRepo.findAll()) {
 			fp.add(p);
 		}
 	}

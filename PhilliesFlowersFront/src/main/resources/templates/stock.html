@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Phillies Flowers | Order Details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/main.css" th:href="@{/main.css}" />
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two'
+	rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div id="head">
+		<p id="headTitle">Phillies Flowers</p>
+		<div id="navBar">
+			<ul>
+				<li><a href="http://localhost:8070">Home</a></li>
+				<li>Make Order</li>
+				<li>Packages</li>
+				<li><a href="http://localhost:8070/login">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<p id="headline">Stock Management</p>
+		<div id="orderSummary">
+			<p id="paneTitle" style="color: #000;">Current Stock</p>
+
+			<table class="stockTable">
+				<tr class="stockTableTitle">
+					<th>Flower</th>
+					<th>Current Stock</th>
+					<th>Price (€) </th>
+				</tr>
+				<tr th:each="flower : ${flowers}" class="stockTableMain">
+					<td th:text="${flower.name}"></td>
+					<td th:text="${flower.stock}"></td>
+					<td th:text="${flower.price}"></td>
+				</tr>
+			</table>
+			
+			<table class="stockTable">
+				<tr class="stockTableTitle">
+					<th>Package</th>
+					<th>Current Stock</th>
+					<th>Price (€)</th>
+				</tr>
+				<tr th:each="package : ${packages}" class="stockTableMain">
+					<td th:text="${package.name}"></td>
+					<td th:text="${package.stock}"></td>
+					<td th:text="${package.price}"></td>
+				</tr>
+			</table>			
+		</div>
+	</div>
+</body>
+</html>

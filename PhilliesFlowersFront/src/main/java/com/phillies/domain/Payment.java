@@ -1,5 +1,9 @@
 package com.phillies.domain;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,10 +11,29 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Payment {
 	@Id
 	int paymentId;
-
-	String cardNo, cardholder, month, year, cvc;
 	
-	public Payment(int paymentId, String cardNo, String cardholder, String month, String year, String cvc) {
+	@NotNull
+	@Size(min=16,max=16)
+	@CreditCardNumber
+	String cardNo;
+	
+	@NotNull
+	@Size(min=2,max=50)
+	String cardholder;
+	
+	@NotNull
+	@Size(min=2,max=2)
+	int month;
+	
+	@NotNull
+	@Size(min=4,max=4)
+	int year;
+	
+	@NotNull
+	@Size(min=3,max=3)
+	int cvc;
+	
+	public Payment(int paymentId, String cardNo, String cardholder, int month, int year, int cvc) {
 		super();
 		this.paymentId = paymentId;
 		this.cardNo = cardNo;
@@ -48,27 +71,27 @@ public class Payment {
 		this.cardholder = cardholder;
 	}
 
-	public String getMonth() {
+	public int getMonth() {
 		return month;
 	}
 
-	public void setMonth(String month) {
+	public void setMonth(int month) {
 		this.month = month;
 	}
 
-	public String getYear() {
+	public int getYear() {
 		return year;
 	}
 
-	public void setYear(String year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 
-	public String getCvc() {
+	public int getCvc() {
 		return cvc;
 	}
 
-	public void setCvc(String cvc) {
+	public void setCvc(int cvc) {
 		this.cvc = cvc;
 	}
 }
