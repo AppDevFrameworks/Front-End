@@ -14,7 +14,7 @@ a {
 #error{
 	margin-left: 23%;
 	font-size: 1.2em;
-	color: #f00;
+	color: #77dd77;
 	font-family: "Arial";
 	line-height: 20%;
 }
@@ -247,14 +247,6 @@ li:hover {
 	text-align: center;
 	margin-top: 3vh;
 	margin-bottom: 0vh;
-}
-
-#errors {
-	text-align: center;
-	color: #ff6666;
-	font-size: 1.2em;
-	font-family: "Arial";
-	line-height: 50%;
 }
 
 #main {

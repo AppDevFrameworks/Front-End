@@ -155,16 +155,18 @@ public class MainController {
 		model.addAttribute("months", mon);
 		model.addAttribute("years", year);
 
-		//System.out.println(newOrder("Lily",100));
+		System.out.println(newOrder("Lily",100));
 		return "orderReturn";
 	}
 
 	public String newOrder(String item, int amount) throws MalformedURLException, IOException {
-		String url = "http://localhost:8090/getOrder";
+		String url = "http://localhost:8090/getOrder?name=rob&pass=pass&item="+item+"-"+amount;
+		//getOrder?name=NAME&pass=PASS&item=ITEM-AMOUNT
 		String charset = "UTF-8";
 		String query = String.format("item=%s&amount=%s", 
 				URLEncoder.encode(item, charset), 
 				URLEncoder.encode(amount+"", charset));
+		//url = url+=query;
 		URLConnection connection = new URL(url).openConnection();
 		connection.setDoOutput(true); // Triggers POST.
 		connection.setRequestProperty("Accept-Charset", charset);

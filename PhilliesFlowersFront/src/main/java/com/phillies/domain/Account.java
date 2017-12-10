@@ -1,10 +1,16 @@
 package com.phillies.domain;
 
+import javax.validation.constraints.NotNull;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "account")
 public class Account {
-	String username, password, firstname, lastname;
+	@NotNull
+	String username;
+	@NotNull
+	String password;
+	String firstname, lastname;
 	
 	public Account() {
 		super();

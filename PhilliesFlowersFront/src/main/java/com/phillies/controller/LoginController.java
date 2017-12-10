@@ -2,9 +2,13 @@ package com.phillies.controller;
 
 import java.text.DecimalFormat;
 
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,16 +30,21 @@ public class LoginController {
 
 
 	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public String index(Model model, Account account) {
+	public String index(Model model, Account account, HttpSession session) {
+		if(session.getAttribute("user")==null) {
+			return "login";
+		}
 		model.addAttribute("account", account);
 		return "login";
 	}
 
 	@PostMapping("/login")
-	public String processLogin(Model model, @RequestParam String username, @RequestParam String password) {
-		Account account = (Account) getAccount(username, password);
-		if (account==null)
+	public String processLogin(@Valid Account account, BindingResult bindingResult, Model model, @RequestParam String username, @RequestParam String password, HttpSession session) {
+		account = (Account) getAccount(username, password);
+		if (account == null) {
+			model.addAttribute("error", "Invalid username or password");
 			return "login";
+		}
 		else {
 			model.addAttribute("user", account);
 		}

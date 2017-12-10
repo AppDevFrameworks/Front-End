@@ -24,7 +24,8 @@
 		<div id="form">
 			<form action="#" th:action="@{/login}" th:object="${account}" method="post">
 				<label>Username:</label><input type="text" th:field="*{username}" /><br/>
-				<label>Password:</label><input type="text" th:field="*{password}" /><br/>
+				<label>Password:</label><input type="password" th:field="*{password}" /><br/>
+				<p id="error" th:text="${error}"/>	
 			<br/><button id="orderButton" type="submit">Login</button>
 				</form>
 		</div>
